@@ -54,6 +54,20 @@ Run the tests with Python's standard library:
 python -m unittest discover -s tests
 ```
 
+## Interactive hydrograph notebook
+
+Install the optional notebook dependencies and launch Jupyter:
+
+```sh
+python -m pip install -r requirements-notebook.txt
+jupyter notebook notebooks/hydrograph_demo.ipynb
+```
+
+Generate the included, clearly labeled synthetic 90-day spring forcing file
+with `python scripts/generate_synthetic_forcing.py`. The notebook reads that
+CSV and plots precipitation, temperature, snow storage, and the simulated
+hydrograph.
+
 ## Limitations
 
 This is a single-bucket catchment-average model: it omits spatial variation,
